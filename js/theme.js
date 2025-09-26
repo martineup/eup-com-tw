@@ -1000,7 +1000,7 @@ function fusion_side_header_scroll() {
 
 })( jQuery );
 
-jQuery( window ).load( function() { // start window_load_1
+jQuery( window ).on( 'load', function() { // start window_load_1
 
 	// Static layout
 	if( js_local_vars.is_responsive == '0' ) {
@@ -1154,11 +1154,11 @@ jQuery( window ).load( function() { // start window_load_1
 		jQuery( '#wrapper' ).append( jQuery( this ) );
 	});
 
-	jQuery( '.fusion-modal' ).bind('hidden.bs.modal', function () {
+	jQuery( '.fusion-modal' ).on('hidden.bs.modal', function () {
 		jQuery( 'html' ).css( 'overflow', '' );
 	});
 
-	jQuery( '.fusion-modal' ).bind('show.bs.modal', function () {
+	jQuery( '.fusion-modal' ).on('show.bs.modal', function () {
 		var $slidingbar = jQuery( '#slidingbar' );
 
 		jQuery( 'html' ).css( 'overflow', 'visible' );
@@ -2343,7 +2343,7 @@ jQuery( document ).ready(function($) { // start document_ready_1
 		jQuery( this ).addClass( 'products-' + js_local_vars.woocommerce_shop_page_columns );
 	});
 
-	jQuery('.woocommerce-tabs ul.tabs li a').unbind( 'click' );
+	jQuery('.woocommerce-tabs ul.tabs li a').off( 'click' );
 	jQuery('.woocommerce-tabs > ul.tabs li a').click(function(){
 
 		var tab = jQuery( this );
@@ -2519,7 +2519,7 @@ jQuery( document ).ready(function($) { // start document_ready_1
 	});
 }); // end document_ready_1
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
     if(cssua.ua.mobile === undefined) {
 	    // Change opacity of page title bar on scrolling
 	    if(js_local_vars.page_title_fading == '1') {
@@ -2623,7 +2623,7 @@ jQuery(document).ready(function() {
 	jQuery('#bbpress-forums').fitVids();
 });
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
 	jQuery('.fusion-youtube-flash-fix').remove();
 });
 
@@ -2689,7 +2689,7 @@ if ( ! orig_logo_container_margin_bottom ) {
 	orig_logo_container_margin_bottom = '0px';
 }
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
 	var headerHeight = jQuery( '.fusion-header-wrapper' ).height();
 
 	if(jQuery('.sidebar').is(':visible')) {
@@ -4393,7 +4393,7 @@ jQuery( document ).ready( function() {
 	}
 });
 
-jQuery( window ).load( function() {
+jQuery( window ).on( 'load', function() {
 	if ( jQuery( '.fusion-secondary-menu .fusion-secondary-menu-cart' ).width() > 176 ) {
 		setTimeout( function() {
 			var cart_width = jQuery( '.fusion-secondary-menu .fusion-secondary-menu-cart' ).outerWidth(),
@@ -4559,7 +4559,7 @@ jQuery( window ).load( function() {
 				}, 10 );
 
 				// Reset the click event for the collapse-month toggle
-				jQuery( $blog_infinite_container ).find( '.fusion-timeline-date' ).unbind( 'click' );
+				jQuery( $blog_infinite_container ).find( '.fusion-timeline-date' ).off( 'click' );
 				jQuery( $blog_infinite_container ).find( '.fusion-timeline-date' ).click( function() {
 					jQuery( this ).next( '.fusion-collapse-month' ).slideToggle();
 				});
@@ -4958,7 +4958,7 @@ if ( location.hash ) {
 	jQuery('body').append( $one_page_link );
 
 	// Scroll the page
-	jQuery( window ).load( function() {
+	jQuery( window ).on( 'load', function() {
 		setTimeout( function() {
 			$one_page_link.trigger( 'click' );
 		}, 100);

@@ -27695,7 +27695,7 @@ jQuery(document).ready(function() {
 	//initialize lightbox
 	$avada_lightbox.initialize_lightbox();
 });
-;jQuery(window).load(function() {
+;jQuery(window).on('load', function() {
     // Avada dropdown styles
     if ( !Boolean( Number( js_local_vars.avada_styles_dropdowns ) ) ) {
 
@@ -27958,7 +27958,7 @@ recursive_gform_submission_handler();
         });
     }
 );
-;jQuery(window).load(function() {
+;jQuery(window).on('load', function() {
     // BBPress
     jQuery( '.bbp-template-notice' ).each(
         function() {
@@ -28057,7 +28057,7 @@ jQuery(
 );
 
 // Resize crossfade images and square to be the largest image and also vertically centered
-jQuery( window ).load(
+jQuery( window ).on( 'load',
     function() {
         jQuery( window ).resize(
             function() {
@@ -28855,7 +28855,7 @@ jQuery( document ).ready(
 );
 
 // ThemeFusion edit for Avada theme: needed if FusionSlider is present to recalc the dimensions
-jQuery( window ).load( function() {
+jQuery( window ).on( 'load', function() {
 	// setTimeout( parallaxAll, 1 );
 	setTimeout(
 		function() {
@@ -29463,7 +29463,7 @@ jQuery( document ).ready(
     }
 );
 
-jQuery( window ).load(
+jQuery( window ).on( 'load',
 	function() {
         jQuery( '[data-youtube-video-id], [data-vimeo-video-id]' ).each(
             function() {
@@ -30370,7 +30370,7 @@ jQuery( window ).load(
 	}
 });
 
-jQuery( window ).load(function() {
+jQuery( window ).on( 'load',function() {
 	// Sticky Header
 	if( js_local_vars.header_sticky == '1' && ( jQuery( '.fusion-header-wrapper' ).length >= 1 || jQuery( '#side-header').length >= 1 ) ) {
 		var $animation_duration = 300;
@@ -32012,7 +32012,7 @@ function fusion_side_header_scroll() {
 
 })( jQuery );
 
-jQuery( window ).load( function() { // start window_load_1
+jQuery( window ).on( 'load', function() { // start window_load_1
 
 	// Static layout
 	if( js_local_vars.is_responsive == '0' ) {
@@ -33531,7 +33531,7 @@ jQuery( document ).ready(function($) { // start document_ready_1
 	});
 }); // end document_ready_1
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
     if(cssua.ua.mobile === undefined) {
 	    // Change opacity of page title bar on scrolling
 	    if(js_local_vars.page_title_fading == '1') {
@@ -33635,7 +33635,7 @@ jQuery(document).ready(function() {
 	jQuery('#bbpress-forums').fitVids();
 });
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
 	jQuery('.fusion-youtube-flash-fix').remove();
 });
 
@@ -33701,7 +33701,7 @@ if ( ! orig_logo_container_margin_bottom ) {
 	orig_logo_container_margin_bottom = '0px';
 }
 
-jQuery(window).load(function() {
+jQuery(window).on('load', function() {
 	var headerHeight = jQuery( '.fusion-header-wrapper' ).height();
 
 	if(jQuery('.sidebar').is(':visible')) {
@@ -35405,7 +35405,7 @@ jQuery( document ).ready( function() {
 	}
 });
 
-jQuery( window ).load( function() {
+jQuery( window ).on( 'load', function() {
 	if ( jQuery( '.fusion-secondary-menu .fusion-secondary-menu-cart' ).width() > 176 ) {
 		setTimeout( function() {
 			var cart_width = jQuery( '.fusion-secondary-menu .fusion-secondary-menu-cart' ).outerWidth(),
@@ -35970,7 +35970,7 @@ if ( location.hash ) {
 	jQuery('body').append( $one_page_link );
 
 	// Scroll the page
-	jQuery( window ).load( function() {
+	jQuery( window ).on( 'load', function() {
 		setTimeout( function() {
 			$one_page_link.trigger( 'click' );
 		}, 100);
